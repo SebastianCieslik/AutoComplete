@@ -1,8 +1,10 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 body {
-  padding:5%;
+  padding: 5%;
   font: 16px Arial;
-  background-color:#6699cc;
+  background-color: #6699cc;
 }
 
 .autocomplete {
@@ -10,29 +12,26 @@ body {
   display: inline-block;
   border-radius: 50px;
 }
-.container{
+.container {
   background-color: black;
-  border: solid 5px  #4d4d7e;
-
+  border: solid 5px #4d4d7e;
 }
-.deleteButton{
-  font-weight:900;
-  background-color:#000066;
-  color:white;
+.deleteButton {
+  font-weight: 900;
+  background-color: #000066;
+  color: white;
   border-radius: 15px;
   margin-left: 5px;
-  
 }
-.main_div{
+.main_div {
   margin-left: auto;
   margin-right: auto;
   width: 500px;
   height: 300px;
-  padding:10px;
+  padding: 10px;
   border: solid 5px #4d4d7e;
-  border-radius:25px;
-  background-color: rgb(218, 218, 218) ;
-  
+  border-radius: 25px;
+  background-color: rgb(218, 218, 218);
 }
 .addNew {
   background-color: DodgerBlue;
@@ -40,43 +39,42 @@ body {
   font: 16px Arial;
   box-sizing: border-box;
   padding: 10px;
-  border: 2px solid ;
-  border-radius:50px;
+  border: 2px solid;
+  border-radius: 50px;
 }
-#myInputautocomplete-list{
+#myInputautocomplete-list {
   border-radius: 17px;
-  overflow:hidden;
+  overflow: hidden;
 }
 input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
   padding: 10px;
   font-size: 16px;
-  display:inline-block;
+  display: inline-block;
   border-radius: 50px;
 }
-input[type=text] {
+input[type="text"] {
   background-color: #f1f1f1;
   width: 100%;
-  display:inline-block;
+  display: inline-block;
 }
-input[type=submit] {
+input[type="submit"] {
   background-color: DodgerBlue;
   color: #fff;
-
 }
-li{
+li {
   background-color: #5598b9;
-  border-radius:15px;
-  width:fit-content;
+  border-radius: 15px;
+  width: fit-content;
   list-style: none;
-  padding:5px;
-  border:solid 2px #00527a ;
-  margin:2px;
+  padding: 5px;
+  border: solid 2px #00527a;
+  margin: 2px;
 }
-ul{
+ul {
   padding-left: 0px;
- 	max-height: 200px;
+  max-height: 200px;
   overflow-y: auto;
 }
 
@@ -97,7 +95,6 @@ ul{
   background-color: #6633cc;
   border-bottom: 1px solid #d4d4d4;
   transition: all 0.4s ease;
-
 }
 .autocomplete-items div:hover {
   background-color: #461f94;
@@ -106,6 +103,6 @@ ul{
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
-.form{
-  display:inline-block;
+.form {
+  display: inline-block;
 }

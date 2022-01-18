@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Autocomplete Search Box | CodingNepal</title>
+    <title>Autocomplete Search Box</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -17,23 +16,22 @@
         <!--Make sure the form has the autocomplete function switched off:-->
 
         <form autocomplete="off" class="form">
-          <div class="autocomplete" >
+          <div class="autocomplete">
             <input
               id="myInput"
-              class="myInput";
+              class="myInput"
               type="text"
               name="myCountry"
               placeholder="Country"
             />
           </div>
         </form>
-        <button class="addNew" onclick=addNewCountry() >Add</button>
+        <button class="addNew" onclick="addNewCountry()">Add</button>
         <ul class="submited"></ul>
       </div>
     </div>
 
     <script src="js/suggestions.js"></script>
     <script src="js/script.js"></script>
-
   </body>
 </html>
