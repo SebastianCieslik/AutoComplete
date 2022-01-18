@@ -4,21 +4,34 @@ let countries = ["Afghanistan","Albania","Algeria","Andorra","Angola"];
 const checked = document.querySelector(".submited");
 const activeList = [];
 const devArea = document.querySelector(".dev-area");
+var typeName = "";
 
 
 const moveBackward = (name) => {
 
   console.log(name);
   const countyident = document.getElementById(name);
-  console.log(countyident);
+//  console.log(countyident);
   countyident.parentNode.removeChild(countyident);
-  //
   countries.push(name);
   countries.sort();
   let countryIndex = activeList.indexOf(name);
   activeList.splice(countryIndex,1);
 
 };
+
+//const showButton = (x) =>{
+//const cleanButton = document.querySelector(".addNew");
+//cleanButton.setAttribute("class", "addNewVisible");
+//console.log(cleanButton);
+//console.log(x);
+//};
+
+
+//const hideButton = () => {
+//  const cleanButton = document.querySelector(".addNew");
+//cleanButton.setAttribute("class", "addNew");
+//};
 
 
 
@@ -34,11 +47,34 @@ const createCountry = (name) => {
     item2.setAttribute("value",name);
     item.setAttribute("id",name);
     item3.setAttribute("value",name);
+    item3.setAttribute("id","li");
     item2.addEventListener("click", function() {
       moveBackward(name);
+
     });
   	return item;
 };
+const addNewCountry = () => {
+  console.log(typeName);
+    const item = document.createElement("li");
+    const item2 = document.createElement("button");
+    const item3 = document.createElement("span");
+    item3.textContent = typeName;
+    item2.textContent = "X";
+    item.appendChild(item3);
+    item.appendChild(item2);
+    item.setAttribute("value",typeName);
+    item2.setAttribute("value",typeName);
+    item.setAttribute("id",typeName);
+    item3.setAttribute("value",typeName);
+    item3.setAttribute("id","li");
+    item2.addEventListener("click", function() {
+      moveBackward(typeName);
+    });
+    activeList.push(typeName);
+    checked.appendChild(item);
+
+}
 
 const refreshCountries = () => {
   checked.textContent = '';
@@ -55,6 +91,13 @@ const refreshCountries = () => {
         var a, b, i, val = this.value;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
+//
+      console.log("biatch");
+      console.log(this.value);
+      typeName = this.value;
+
+
+//
         if (!val) { return false;}
         currentFocus = -1;
         /*create a DIV element that will contain the items (values):*/
@@ -66,9 +109,16 @@ const refreshCountries = () => {
         /*for each item in the array...*/
         for (i = 0; i < arr.length; i++) {
           /*check if the item starts with the same letters as the text field value:*/
+          
+
           if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
             /*create a DIV element for each matching element:*/
             b = document.createElement("DIV");
+//
+            
+            
+
+//
             /*make the matching letters bold:*/
             b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i].substr(val.length);
@@ -78,11 +128,15 @@ const refreshCountries = () => {
                 b.addEventListener("click", function(e) {
                   const countryName = this.getElementsByTagName("input")[0].value;
                   activeList.push(countryName);
+                  console.log(activeList);
                 //splice
                 const countryIndex = countries.indexOf(countryName);
                 countries.splice(countryIndex,1);
                   console.log(activeList);;
                   refreshCountries();
+                  //
+
+                  //
 
                 inp.value = this.getElementsByTagName("input")[0].value;
                 /*close the list of autocompleted values,
@@ -90,7 +144,7 @@ const refreshCountries = () => {
                 closeAllLists();
             });
             a.appendChild(b);
-          }
+          }6
         }
     });
     /*execute a function presses a key on the keyboard:*/
@@ -142,6 +196,7 @@ const refreshCountries = () => {
         if (elmnt != x[i] && elmnt != inp) {
         x[i].parentNode.removeChild(x[i]);
       }
+//      showButton(x.length);
     }
   }
   /*execute a function when someone clicks in the document:*/

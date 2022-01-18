@@ -13,10 +13,21 @@ body {
   border: solid 5px;
 }
 .main_div{
-  width: 500px;
+  width: 700px;
   height:300px;
   padding:10px;
   border: solid 5px;
+}
+.addNew {
+visibility: hidden;
+}
+.addNewVisible{
+  background-color: DodgerBlue;
+  color: #fff;
+  font: 16px Arial;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid transparent;
 }
 input {
   border: 1px solid transparent;
