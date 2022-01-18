@@ -1,47 +1,68 @@
 * { box-sizing: border-box; }
 body {
+  padding:5%;
   font: 16px Arial;
+  background-color:#6699cc;
 }
 
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
+  border-radius: 50px;
 }
 .container{
   background-color: black;
-  border: solid 5px;
+  border: solid 5px  #4d4d7e;
+
+}
+.deleteButton{
+  font-weight:900;
+  background-color:#000066;
+  color:white;
+  border-radius: 15px;
 }
 .main_div{
-  width: 700px;
-  height:300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 300px;
   padding:10px;
-  border: solid 5px;
+  border: solid 5px #4d4d7e;
+  border-radius:25px;
+  background-color: rgb(218, 218, 218) ;
+  
 }
 .addNew {
-visibility: hidden;
-}
-.addNewVisible{
   background-color: DodgerBlue;
   color: #fff;
   font: 16px Arial;
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid transparent;
+  border: 2px solid ;
+  border-radius:50px;
+}
+#myInputautocomplete-list{
+  border:10px solid red;
+  border-radius: 50px;
 }
 input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
   padding: 10px;
   font-size: 16px;
+  display:inline-block;
+  border-radius: 50px;
 }
 input[type=text] {
   background-color: #f1f1f1;
   width: 100%;
+  display:inline-block;
 }
 input[type=submit] {
   background-color: DodgerBlue;
   color: #fff;
+
 }
 .autocomplete-items {
   position: absolute;
@@ -53,19 +74,25 @@ input[type=submit] {
   top: 100%;
   left: 0;
   right: 0;
+  border-radius: 50px;
 }
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #6633cc;
   border-bottom: 1px solid #d4d4d4;
+
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
-  background-color: #e9e9e9;
+  background-color: #562bac;
 }
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
+  border-radius: 50px;
+}
+.form{
+  display:inline-block;
 }

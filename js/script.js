@@ -3,38 +3,25 @@
 let countries = ["Afghanistan","Albania","Algeria","Andorra","Angola"];
 const checked = document.querySelector(".submited");
 const activeList = [];
-const devArea = document.querySelector(".dev-area");
 var typeName = "";
 const input = document.querySelector(".myInput");
 
 
 
 const moveBackward = (name) => {
-
+  console.log("zawiera:",countries.includes(name));
   console.log(name);
   const countyident = document.getElementById(name);
   console.log("countyIdent",countyident);
   countyident.parentNode.removeChild(countyident);
+  if(countries.includes(name) == false){
   countries.push(name);
   countries.sort();
   let countryIndex = activeList.indexOf(name);
   activeList.splice(countryIndex,1);
+  }
 
 };
-
-//const showButton = (x) =>{
-//const cleanButton = document.querySelector(".addNew");
-//cleanButton.setAttribute("class", "addNewVisible");
-//console.log(cleanButton);
-//console.log(x);
-//};
-
-
-//const hideButton = () => {
-//  const cleanButton = document.querySelector(".addNew");
-//cleanButton.setAttribute("class", "addNew");
-//};
-
 
 
 const createCountry = (name) => {
@@ -42,7 +29,8 @@ const createCountry = (name) => {
     const item2 = document.createElement("button");
     const item3 = document.createElement("span");
     item3.textContent = name;
-    item2.textContent = "X";
+    item2.textContent = "✕";
+    item2.setAttribute("class","deleteButton");
     item.appendChild(item3);
     item.appendChild(item2);
     item.setAttribute("value",name);
@@ -64,7 +52,8 @@ const addNewCountry = () => {
     const item2 = document.createElement("button");
     const item3 = document.createElement("span");
     item3.textContent = name;
-    item2.textContent = "X";
+    item2.textContent = "✕";
+    item2.setAttribute("class","deleteButton");
     item.appendChild(item3);
     item.appendChild(item2);
     item.setAttribute("value",name);

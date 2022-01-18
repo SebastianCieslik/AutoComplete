@@ -15,8 +15,9 @@
     <div class="main_div">
       <div class="search-input">
         <!--Make sure the form has the autocomplete function switched off:-->
-        <form autocomplete="off">
-          <div class="autocomplete" style="width: 300px">
+
+        <form autocomplete="off" class="form">
+          <div class="autocomplete" >
             <input
               id="myInput"
               class="myInput";
@@ -25,12 +26,10 @@
               placeholder="Country"
             />
           </div>
-          
-          <input type="submit" />
+ <!--         <input type="submit" />-->
         </form>
-        <button class="addNewVisible" onclick=addNewCountry() >dodaj</button>
+        <button class="addNew" onclick=addNewCountry() >Add</button>
         <ul class="submited"></ul>
-        <div class="dev-area"></div>
       </div>
     </div>
 
