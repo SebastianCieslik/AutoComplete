@@ -5,13 +5,15 @@ const checked = document.querySelector(".submited");
 const activeList = [];
 const devArea = document.querySelector(".dev-area");
 var typeName = "";
+const input = document.querySelector(".myInput");
+
 
 
 const moveBackward = (name) => {
 
   console.log(name);
   const countyident = document.getElementById(name);
-//  console.log(countyident);
+  console.log("countyIdent",countyident);
   countyident.parentNode.removeChild(countyident);
   countries.push(name);
   countries.sort();
@@ -50,30 +52,33 @@ const createCountry = (name) => {
     item3.setAttribute("id","li");
     item2.addEventListener("click", function() {
       moveBackward(name);
-
     });
   	return item;
 };
 const addNewCountry = () => {
-  console.log(typeName);
+
+  if(input.value){
+    const name = input.value;
+    console.log(name);
     const item = document.createElement("li");
     const item2 = document.createElement("button");
     const item3 = document.createElement("span");
-    item3.textContent = typeName;
+    item3.textContent = name;
     item2.textContent = "X";
     item.appendChild(item3);
     item.appendChild(item2);
-    item.setAttribute("value",typeName);
-    item2.setAttribute("value",typeName);
-    item.setAttribute("id",typeName);
-    item3.setAttribute("value",typeName);
+    item.setAttribute("value",name);
+    item2.setAttribute("value",name);
+    item.setAttribute("id",name);
+    item3.setAttribute("value",name);
     item3.setAttribute("id","li");
     item2.addEventListener("click", function() {
-      moveBackward(typeName);
+      moveBackward(name);
     });
-    activeList.push(typeName);
+    activeList.push(name);
     checked.appendChild(item);
-
+    input.value = "";
+  };
 }
 
 const refreshCountries = () => {
