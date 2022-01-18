@@ -21,6 +21,8 @@ body {
   background-color:#000066;
   color:white;
   border-radius: 15px;
+  margin-left: 5px;
+  
 }
 .main_div{
   margin-left: auto;
@@ -43,8 +45,8 @@ body {
   border-radius:50px;
 }
 #myInputautocomplete-list{
-  border:10px solid red;
-  border-radius: 50px;
+  border-radius: 17px;
+  overflow:hidden;
 }
 input {
   border: 1px solid transparent;
@@ -64,6 +66,19 @@ input[type=submit] {
   color: #fff;
 
 }
+li{
+  background-color: #5598b9;
+  border-radius:15px;
+  width:fit-content;
+  list-style: none;
+  padding:5px;
+  border:solid 2px #00527a ;
+  margin:2px;
+}
+ul{
+  padding-left: 0px;
+}
+
 .autocomplete-items {
   position: absolute;
   border: 1px solid #d4d4d4;
@@ -81,11 +96,12 @@ input[type=submit] {
   cursor: pointer;
   background-color: #6633cc;
   border-bottom: 1px solid #d4d4d4;
+  transition: all 0.4s ease;
 
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
-  background-color: #562bac;
+  background-color: #461f94;
 }
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
